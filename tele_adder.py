@@ -66,7 +66,9 @@ else:
         a.write(api_id + '\n' + api_hash)
 
 client = TelegramClient('anon', api_id, api_hash)
-
+# M = min to wait
+M = 60
+SLEEP_TIME = M * 60
 async def main():
     # To Add Members.......
     async def getmem():
@@ -99,11 +101,12 @@ async def main():
                 print(ye+"please wait for 1 minute...")
                 time.sleep(60)
             elif count >= 300:
-                await client.disconnect()
-                break
+                print('Sleeping ' + str(SLEEP_TIME * 3) + ' seconds')
+                time.sleep(SLEEP_TIME * 3)
+                i = 0
             elif i >= 8:
-                print('Sleeping 30m')
-                time.sleep(1800)
+                print('Sleeping ' + str(SLEEP_TIME) + ' seconds')
+                time.sleep(SLEEP_TIME)
                 i = 0
             count+=1
             time.sleep(1)
