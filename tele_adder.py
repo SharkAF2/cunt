@@ -102,8 +102,8 @@ async def main():
                 print(ye+"please wait for 1 minute...")
                 time.sleep(60)
             elif count >= 300:
-                print('Sleeping ' + str(SLEEP_TIME * 3) + ' seconds')
-                time.sleep(SLEEP_TIME * 3)
+                print('Sleeping ' + str(SLEEP_TIME * 2) + ' seconds')
+                time.sleep(SLEEP_TIME * 2)
                 count = 0
                 i = 0
             elif i >= 8:
