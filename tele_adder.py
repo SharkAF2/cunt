@@ -103,6 +103,7 @@ async def main():
             elif count >= 300:
                 print('Sleeping ' + str(SLEEP_TIME * 3) + ' seconds')
                 time.sleep(SLEEP_TIME * 3)
+                count = 0
                 i = 0
             elif i >= 8:
                 print('Sleeping ' + str(SLEEP_TIME) + ' seconds')
